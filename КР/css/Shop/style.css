@@ -129,3 +129,62 @@ body main, body aside{
     border-radius: 10px; /* Радиус скругления углов блока */
 
 }
+
+
+@media only screen and (max-width: 768px) {
+    body main, body aside {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .container {
+        margin-left: 10px;
+    }
+
+    .cards-container {
+        margin-right: 10px;
+    }
+
+    .sort-buttons {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .cart-container {
+        width: 100%;
+        max-width: none;
+        position: relative;
+    }
+
+    .sidebar {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .cards-container {
+        margin-right: 5px;
+    }
+
+    .sort-buttons {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .cart-container {
+        width: 100%;
+        max-width: none;
+        position: relative;
+    }
+
+    .sidebar {
+        width: 100%;
+        max-width: none;
+    }
+}

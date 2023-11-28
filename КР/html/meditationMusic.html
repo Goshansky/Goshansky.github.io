@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="../css/index/header.css">
+    <link rel="stylesheet" href="../css/index/footer.css">
+    <link rel="stylesheet" href="../css/meditationMusic/style.css">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/index/header.css">
-    <link rel="stylesheet" href="css/index/footer.css">
-    <link rel="stylesheet" href="css/meditationMusic/style.css">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script
+            src="https://kit.fontawesome.com/fd9c503804.js"
+            crossorigin="anonymous"
+    ></script>
+    <link rel="icon" href="../image/logo/logo.png">
+    <title>InnerCalmQuest.com</title>
 </head>
 <body>
 
@@ -14,7 +21,7 @@
 <header>
     <!--- Логотип в шапке-->
     <div class="header-logo">
-        <img src="image/logo/logo.png" alt="Логотип сайта">
+        <img src="../image/logo/logo.png" alt="Логотип сайта">
     </div>
     <label for="menu-toggle" class="menu-icon"></label>
     <h1 class="header-title">Найди своё спокойствие!!!</h1>
@@ -22,7 +29,7 @@
     <!--- Меню выбора в шапке-->
     <nav class="header-nav">
         <ul>
-            <li class="header-menu-item"><a class="header-menu-link" href="index.html">Главная</a></li>
+            <li class="header-menu-item"><a class="header-menu-link" href="main.html">Главная</a></li>
             <li><a class="header-menu-link" href="meditationOnline.html">Медитируй онлайн</a></li>
             <li><a class="header-menu-link" href="meditationMusic.html">Музыка для медитации</a></li>
             <li><a class="header-menu-link" href="articlesUseful.html">Полезные статьи</a></li>
@@ -37,19 +44,19 @@
 
     <div class="instrument-btn">
         <p>Струнные</p>
-        <img src="image/music/struna.png" alt="Инструмент 1" class="img">
+        <img src="../image/music/struna.png" alt="Инструмент 1" class="img">
         <button onclick="filterPlaylist(1)">Выбрать</button>
     </div>
 
     <div class="instrument-btn">
         <p>Вокал</p>
-        <img src="image/music/nota.png" alt="Инструмент 2" class="img">
+        <img src="../image/music/nota.png" alt="Инструмент 2" class="img">
         <button onclick="filterPlaylist(2)">Выбрать</button>
     </div>
 
     <div class="instrument-btn">
         <p>Духовые</p>
-        <img src="image/music/dudka.png" alt="Инструмент 3" class="img">
+        <img src="../image/music/dudka.png" alt="Инструмент 3" class="img">
         <button onclick="filterPlaylist(3)">Выбрать</button>
     </div>
     <div class="instrument-btn">
@@ -61,7 +68,7 @@
     <div class="song">
         <p> Paradise Chillout - Clouding </p>
     <audio class="audio-player" controls>
-        <source src="music/meditation1.mp3" type="audio/mp3">
+        <source src="../music/meditation1.mp3" type="audio/mp3">
         Ваш браузер не поддерживает аудио элемент.
     </audio>
     </div>
@@ -72,7 +79,7 @@
         <div class="song">
             <p> 1. Paradise Chillout - Clouding </p>
             <audio class="audio-player" controls>
-                <source src="music/meditation1.mp3" type="audio/mp3">
+                <source src="../music/meditation1.mp3" type="audio/mp3">
                 Ваш браузер не поддерживает аудио элемент.
             </audio>
         </div>
@@ -80,7 +87,7 @@
         <div class="song">
             <p> 2. Aeoliah - For Your Love Only </p>
             <audio class="audio-player" controls>
-                <source src="music/meditation2.mp3" type="audio/mp3">
+                <source src="../music/meditation2.mp3" type="audio/mp3">
                 Ваш браузер не поддерживает аудио элемент.
             </audio>
         </div>
@@ -88,7 +95,7 @@
         <div class="song">
             <p> 3. Morpheo - Under the Trees </p>
             <audio class="audio-player" controls>
-                <source src="music/meditation1.mp3" type="audio/mp3">
+                <source src="../music/meditation1.mp3" type="audio/mp3">
                 Ваш браузер не поддерживает аудио элемент.
             </audio>
         </div>
@@ -96,7 +103,7 @@
         <div class="song">
             <p> 4. Fucca Music Sense - Deep Devotion </p>
             <audio class="audio-player" controls>
-                <source src="music/meditation4.mp3" type="audio/mp3">
+                <source src="../music/meditation4.mp3" type="audio/mp3">
                 Ваш браузер не поддерживает аудио элемент.
             </audio>
         </div>
@@ -104,7 +111,7 @@
         <div class="song">
             <p> 5. Buvana - Ishvara Lila Yitellam </p>
             <audio class="audio-player" controls>
-                <source src="music/meditation5.mp3" type="audio/mp3">
+                <source src="../music/meditation5.mp3" type="audio/mp3">
                 Ваш браузер не поддерживает аудио элемент.
             </audio>
         </div>
@@ -112,7 +119,7 @@
         <div class="song">
             <p> 6. Ressonnimo - Sol Naciente (Yoga & Meditation Version) </p>
             <audio class="audio-player" controls>
-                <source src="music/meditation6.mp3" type="audio/mp3">
+                <source src="../music/meditation6.mp3" type="audio/mp3">
                 Ваш браузер не поддерживает аудио элемент.
             </audio>
         </div>
@@ -120,7 +127,7 @@
         <div class="song">
             <p> 7. Funkana - Softness Red (Zen Ambient Meditation) </p>
             <audio class="audio-player" controls>
-                <source src="music/meditation7.mp3" type="audio/mp3">
+                <source src="../music/meditation7.mp3" type="audio/mp3">
                 Ваш браузер не поддерживает аудио элемент.
             </audio>
         </div>
@@ -128,7 +135,7 @@
         <div class="song">
             <p> 8. 8s8 - Cosmica (Original Mix) </p>
             <audio class="audio-player" controls>
-                <source src="music/meditation8.mp3" type="audio/mp3">
+                <source src="../music/meditation8.mp3" type="audio/mp3">
                 Ваш браузер не поддерживает аудио элемент.
             </audio>
         </div>
@@ -136,7 +143,7 @@
         <div class="song">
             <p> 9. Chris Michell - Here and Now </p>
             <audio class="audio-player" controls>
-                <source src="music/meditation9.mp3" type="audio/mp3">
+                <source src="../music/meditation9.mp3" type="audio/mp3">
                 Ваш браузер не поддерживает аудио элемент.
             </audio>
         </div>
@@ -144,7 +151,7 @@
         <div class="song">
             <p> 10. Govannen - Lady of the Lake </p>
             <audio class="audio-player" controls>
-                <source src="music/meditation10.mp3" type="audio/mp3">
+                <source src="../music/meditation10.mp3" type="audio/mp3">
                 Ваш браузер не поддерживает аудио элемент.
             </audio>
         </div>
@@ -152,7 +159,7 @@
 
     <div class="images">
         <!-- Добавьте картинки сюда -->
-        <img src="image/music/med_music.png" alt="Image 1">
+        <img src="../image/music/med_music.png" alt="Image 1">
         <p>
             В мире бескрайних звуков, где каждая нота — как капля росы на лепестке цветка, зарождается музыка для медитации. Это не просто последовательность звуков, а путеводная нить, ведущая в глубины своего внутреннего мира.
         </p>
@@ -245,7 +252,7 @@
             <h2>Навигация</h2>
 
             <ul class="nav-menu">
-                <li><a href="index.html">Главная</a></li>
+                <li><a href="main.html">Главная</a></li>
                 <li><a href="meditationOnline.html">Медитируй онлайн</a></li>
                 <li><a href="meditationMusic.html">Музыка для медитации</a></li>
                 <li><a href="articlesUseful.html">Полезные статьи</a></li>

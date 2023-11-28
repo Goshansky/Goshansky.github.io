@@ -109,3 +109,8 @@
 .footer .footer-container .contact .contact-list .contact-list-item a:hover {
     color: var(--purple);
 }
+
+.footer .footer-container {
+    display: flex;
+    flex-wrap: wrap; /* Элементы футера идут в строку на маленьких экранах */
+}

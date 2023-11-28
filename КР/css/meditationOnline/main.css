@@ -19,10 +19,11 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: stretch;
+    flex-wrap: wrap;
 }
 
 .card {
-    width: 30%;
+    width: 450px;
     height: auto;
     padding: 20px;
     border: 1px solid #ccc;
@@ -180,6 +181,27 @@ a.link-contents {
 
 a.link-contents:hover {
     text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+
+
+    .img {
+        width: 100%;
+    }
+
+    a.link-contents {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    fieldset {
+        grid-template-columns: 1fr; /* Один столбец для мобильных экранов */
+    }
 }
 
 

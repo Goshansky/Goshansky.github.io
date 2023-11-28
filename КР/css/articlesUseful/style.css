@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
 *{
     font-family: 'Arial', sans-serif; /* Выберите подходящий шрифт */
 }
@@ -17,21 +20,23 @@ main {
 }
 
 .article-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
-    max-width: 1200px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    max-width: 1400px;
+    margin: 20px auto;
 }
 
-
 .article-card {
+    width: 300px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
 }
 
 .article-card:hover {
@@ -42,6 +47,10 @@ main {
     width: 100%;
     height: 300px;
     object-fit: cover;
+    object-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .article-content {

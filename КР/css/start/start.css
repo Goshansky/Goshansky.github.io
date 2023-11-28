@@ -124,7 +124,7 @@ section .color:nth-child(3)
 .container
 {
     position: relative;
-    width: 1000px;
+    width: 800px;
     min-height: 400px;
     background: rgba(255,255,255,0.1);
     border-radius: 10px;
@@ -233,4 +233,95 @@ li::before {
 }
 
 
+@media only screen and (max-width: 768px) {
+    section .color:nth-child(1) {
+        top: 5%;
+        width: 300px;
+        height: 300px;
+    }
 
+    section .color:nth-child(2) {
+        bottom: 5%;
+        left: 5%;
+        width: 250px;
+        height: 250px;
+    }
+
+    section .color:nth-child(3) {
+        bottom: 5%;
+        right: 5%;
+        width: 150px;
+        height: 200px;
+    }
+
+    .box .square {
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+    }
+
+    .box .square:nth-child(1) {
+        top: -25px;
+        right: -30px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .box .square:nth-child(2) {
+        top: 75px;
+        left: -50px;
+        width: 60px;
+        height: 60px;
+        z-index: 2;
+    }
+
+    .box .square:nth-child(3) {
+        bottom: 25px;
+        right: -30px;
+        width: 40px;
+        height: 40px;
+        z-index: 2;
+    }
+
+    .box .square:nth-child(4) {
+        bottom: -40px;
+        left: 50px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .box .square:nth-child(5) {
+        top: -40px;
+        left: 70px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .form {
+        padding: 20px;
+    }
+
+    .form h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .form h2::before {
+        bottom: -8px;
+        width: 60px;
+    }
+
+    .form p {
+        margin-bottom: 15px;
+    }
+
+    .pulsating-text {
+        font-size: 16px;
+    }
+}

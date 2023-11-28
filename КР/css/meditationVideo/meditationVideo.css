@@ -16,9 +16,6 @@ main {
 h1{
     text-align: center;
 }
-span{
-    margin-left: 48%;
-}
 
 .cards {
     display: flex;
@@ -28,7 +25,7 @@ span{
 }
 
 .card {
-    width: 30%;
+    width: 450px;
     height: auto;
     padding: 20px;
     border: 1px solid #ccc;
@@ -55,4 +52,26 @@ span{
     font-size: 0.9em;
     color: #555;
     margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .card iframe {
+        height: 150px;
+    }
 }

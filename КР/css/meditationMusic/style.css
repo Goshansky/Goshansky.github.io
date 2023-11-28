@@ -117,3 +117,15 @@ p {
     font-size: 18px;
     text-align: justify;
 }
+
+@media only screen and (max-width: 800px) {
+    .sss {
+        display: block;
+    }
+    .images{
+        width: 100%;
+    }
+    #playlist{
+        width: 100%;
+    }
+}

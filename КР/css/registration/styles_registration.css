@@ -7,7 +7,6 @@
     padding: 0;
 }
 
-
 /* ============ .contact-form CSS grid ============ */
 
 .contact-grid {
@@ -21,7 +20,6 @@
 }
 
 @media screen and (min-width: 736px) {
-
     .contact-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -37,9 +35,7 @@
     .submit-button {
         justify-self: start;
     }
-
 }
-
 
 .contact-form {
     margin-top: 30px;
@@ -72,22 +68,19 @@ input[type="time"],
 input[type="url"],
 textarea,
 select {
-
     border: none;
     height: 40px;
     padding: 0 10px;
     width: 100%;
     background-color: rgb(247,247,247);
     color: rgb(85,85,85);
+    margin-top: 10px; /* Добавленный стиль для отступа между полями */
 }
-
 
 textarea {
     height: 140px !important;
     padding: 10px 10px;
-
 }
-
 
 .btn {
     background-color: rgb(61,197,223);
