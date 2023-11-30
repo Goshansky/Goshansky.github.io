@@ -7,7 +7,6 @@
     top: 10px;
     border-radius: 15px; /* Радиус скругления углов блока */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень блока для добавления глубины */
-
 }
 
 .sidebar-content {

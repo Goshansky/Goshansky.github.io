@@ -50,9 +50,9 @@
         flex-wrap: wrap; /* Элементы футера идут в строку на маленьких экранах */
     }
     main {
-        padding: 10px; /* Adjust padding for smaller screens */
-        border-left-style: none; /* Remove dashed border for smaller screens */
-        border-right-style: none; /* Remove dashed border for smaller screens */
+        padding: 10px;
+        border-left-style: none;
+        border-right-style: none;
     }
 
     #first img,
@@ -60,17 +60,17 @@
     #six img,
     #second img,
     #fifth img {
-        float: none; /* Center images for smaller screens */
-        width: 100%; /* Make images full width */
-        margin: 0; /* Remove margin for images */
+        float: none;
+        width: 100%;
+        margin: 0;
     }
 
     main article {
-        padding: 10px; /* Adjust padding for smaller screens */
+        padding: 10px;
     }
 
     article.main-article {
-        border-radius: 10px; /* Reduce border radius for smaller screens */
+        border-radius: 10px;
     }
 
     article.main-article p,
@@ -79,7 +79,7 @@
     article.main-article h2,
     article.main-article h3,
     article.main-article span {
-        font-size: 16px; /* Adjust font size for smaller screens */
+        font-size: 16px;
     }
 
 }
@@ -110,9 +110,9 @@
     #six img,
     #second img,
     #fifth img {
-        float: none; /* Center images for smaller screens */
-        width: 100%; /* Make images full width */
-        margin: 0; /* Remove margin for images */
+        float: none;
+        width: 100%;
+        margin: 0;
     }
 }
 

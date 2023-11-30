@@ -1,13 +1,21 @@
-/* ============ universal styles ============ */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+*{
+    font-family: 'Arial', sans-serif;
 }
 
-/* ============ .contact-form CSS grid ============ */
+main {
+    font-family: Arial, sans-serif;
+    background-color: #eaecef;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
 
 .contact-grid {
     display: grid;
@@ -23,8 +31,9 @@
     .contact-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 40px 40px 140px 40px;
+        grid-template-rows: 40px 40px 140px 70px;
         grid-gap: 35px;
+        padding: 10px;
     }
 
     /* --- grid items --- */
@@ -71,7 +80,7 @@ select {
     border: none;
     height: 40px;
     padding: 0 10px;
-    width: 100%;
+    width: 90%;
     background-color: rgb(247,247,247);
     color: rgb(85,85,85);
     margin-top: 10px; /* Добавленный стиль для отступа между полями */

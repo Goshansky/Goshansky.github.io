@@ -1,5 +1,5 @@
 *{
-    font-family: 'Arial', sans-serif; /* Выберите подходящий шрифт */
+    font-family: 'Arial', sans-serif;
 }
 
 main{
@@ -38,11 +38,10 @@ article.main-article {
     margin-bottom: 10px;
 }
 
-
 /* Улучшенные стили для текста */
 article.main-article p, article.main-article li {
     font-family: 'Arial', sans-serif; /* Выберите подходящий шрифт */
-    font-size: 18px; /* Регулируйте размер шрифта по вашему вкусу */
+    font-size: 18px;
     line-height: 1.6; /* Регулировка межстрочного интервала */
     color: #333; /* Цвет текста */
     text-align: justify; /* Добавляем выравнивание текста по ширине */
@@ -63,8 +62,8 @@ article.main-article h1, h2, h3{
 article.main-article button {
     display: inline-block;
     padding: 10px 20px;
-    font-size: 16px; /* Регулируйте размер шрифта кнопки */
-    font-family: 'Arial', sans-serif; /* Выберите подходящий шрифт */
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
@@ -78,7 +77,6 @@ article.main-article button {
 article.main-article button:hover {
     background-color: #45a049; /* Цвет фона кнопки при наведении */
 }
-
 
 #third{
     display: block;
