@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Погода</title>
+    <title>Погода и Фильмы</title>
     <link
       rel="stylesheet"
       href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
@@ -14,9 +14,13 @@
     <h1>Погода в Москве</h1>
     <p>Температура: <span id="temp_val"></span> *C</p>
     <p>Минимальная температура: <span id="min_temp_val"></span> *C</p>
-    <p>Максимальаня температура: <span id="max_temp_val"></span> *C</p>
+    <p>Максимальная температура: <span id="max_temp_val"></span> *C</p>
     <p>Давление: <span id="pressure_val"></span> мм</p>
     <p>Ветер: <span id="wind_val"></span> м/с</p>
+
+    <h1>Популярные фильмы</h1>
+    <div id="movies_container"></div>
+
     <script>
       var settings = {
         url: "https://ru.api.openweathermap.org/data/2.5/weather?lat=55.756&lon=37.618&units=metric&appid=a47ccf6881e62bc0d162455742fdda9d",
@@ -36,6 +40,58 @@
           750.1
         ).toFixed(2);
         document.getElementById("wind_val").innerText = response.wind.speed;
+      });
+
+      var movieSettings = {
+        url: "https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_250_BEST_FILMS&page=1",
+        method: "GET",
+        headers: {
+          'X-API-KEY': '4f9260a1-701a-450d-ade5-3495bf98752a',
+          'Content-Type': 'application/json'
+        },
+        timeout: 0,
+      };
+
+      $.ajax(movieSettings).done(function (response) {
+        console.log(response);
+        var moviesContainer = document.getElementById("movies_container");
+        if (response.films && response.films.length > 0) {
+          // Ограничиваем количество фильмов до первых 10
+          var top10Films = response.films.slice(0, 10);
+          top10Films.forEach(function (film, index) {
+            var movieElement = document.createElement("div");
+            movieElement.innerHTML = `
+              <h2>${film.nameRu || film.nameEn}</h2>
+              <p>Год: ${film.year}</p>
+              <p>Рейтинг: ${film.rating}</p>
+              <img src="${film.posterUrlPreview}" alt="${film.nameRu || film.nameEn}" style="max-width: 100px;">
+              <p id="description_${film.filmId}">Загрузка описания...</p>
+            `;
+            moviesContainer.appendChild(movieElement);
+
+            // Дополнительный запрос для получения описания фильма
+            var descriptionSettings = {
+              url: `https://kinopoiskapiunofficial.tech/api/v2.1/films/search-by-keyword?keyword=${film.nameRu || film.nameEn}&page=1`,
+              method: "GET",
+              headers: {
+                'X-API-KEY': '4f9260a1-701a-450d-ade5-3495bf98752a',
+                'Content-Type': 'application/json'
+              },
+              timeout: 0,
+            };
+
+            $.ajax(descriptionSettings).done(function (descriptionResponse) {
+              if (descriptionResponse.films && descriptionResponse.films.length > 0) {
+                var description = descriptionResponse.films[0].description || 'Описание отсутствует';
+                document.getElementById(`description_${film.filmId}`).innerText = description;
+              } else {
+                document.getElementById(`description_${film.filmId}`).innerText = 'Описание отсутствует';
+              }
+            });
+          });
+        } else {
+          moviesContainer.innerHTML = "<p>Фильмы не найдены.</p>";
+        }
       });
     </script>
   </body>
